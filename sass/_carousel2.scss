@@ -1,0 +1,91 @@
+.wrapper{
+   margin-top:80px ;
+   @include breakpoint-down(small){
+       margin-top: 20px;
+   }
+    >h2{
+        color:$DarkBlue;
+        text-align: center;
+        font-size: 37.5px;
+        @include breakpoint-down(small){
+            font-size: 30px;
+        }
+    }
+    .carousel{
+        margin-top: 80px;
+ 
+        .carouselitem{
+            background  :$VeryLightGray;
+            
+            // background-position: top -50%;
+            padding: 0px 90px;
+            width: 500px;
+            height: 340px;
+            @include breakpoint-down(small){
+                padding:0px 40px;
+            }
+            &-img{
+               display: flex;
+               flex-direction: column;
+               justify-content: center;
+               align-items: center;
+               margin: 20px 0px;
+                >img{
+                    width: 70px;
+                }
+                >h3{
+                    margin-top:20px ;
+                    color:$DarkBlue;
+
+                }
+            }
+            &-text{
+                color:$DarkGrayishBlue;
+                text-align: center;
+                margin-top: 20px;
+            }
+        }
+    }
+    &-cta{
+        margin-top: 80px;
+        text-align: center;
+        @include breakpoint-down(small){
+            margin-top: 150px; ;
+        }
+            >button{
+                border: none;
+                background-color: $BrightRed;
+                color: $VeryLightGray;
+                padding: 16px 40px;
+                border-radius: 40px;
+                font-weight: bold;
+                box-shadow: 0 10px 20px -9px $BrightRed;
+                cursor: pointer;
+                transition: all 200ms ease-in-out;
+            }
+            >button:hover{
+                opacity: 0.8;
+            }
+    }
+}
+
+.slick-slide{
+    // margin:0px 90px;
+    // @include breakpoint-down(small){
+    //     margin:0px 40px;
+    // }
+}
+
+.slick-prev, .slick-next{
+    position: relative;
+}
+.slick-dots li button:before {
+    font-size:20px;
+    color: $BrightRed;
+  }
+  .slick-dots li.slick-active button:before{
+      color:$BrightRed;
+  }
+.slick-dots{
+    bottom:-80px;
+}

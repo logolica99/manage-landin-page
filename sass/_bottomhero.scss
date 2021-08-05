@@ -1,0 +1,57 @@
+.bottomhero{
+    background: url(../images/bg-simplify-section-desktop.svg);
+    background-color: $BrightRed;
+    margin-top: 150px;
+  
+    @include breakpoint-down(medium){
+        margin-top: 100px;
+        background: url('../images/bg-simplify-section-mobile.svg');
+        background-repeat: no-repeat;
+        background-color: $BrightRed;
+    }
+    &-wrapper{
+        padding:50px 150px;
+        display: flex;
+        align-items: center;
+        @include breakpoint-down(medium){
+            flex-direction: column;
+            padding: 100px 20px;
+           
+        }
+    }
+    &-text{
+        flex:1;
+        color: white;
+        >h3{
+            font-size: 40px;
+            
+        }
+        @include breakpoint-down(medium){
+            text-align: center;
+
+        }
+    }
+    &-btn{
+        flex:1;
+        text-align: end;
+        >button{
+            color:$BrightRed;
+            border: none;
+            background-color: white;
+        
+            padding: 16px 40px;
+            border-radius: 40px;
+            font-weight: bold;
+            // box-shadow: 0 10px 20px -9px $BrightRed;
+            cursor: pointer;
+            transition: all 200ms ease-in-out;
+        }
+        >button:hover{
+            opacity: 0.8;
+        }
+
+        @include breakpoint-down(medium){
+            margin-top: 40px;
+        }
+    }
+}

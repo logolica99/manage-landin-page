@@ -1,0 +1,99 @@
+.midbody {
+  margin-top: 200px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  @include breakpoint-down(medium) {
+    grid-template-columns: 1fr 0fr;
+    grid-template-rows: 1fr 3fr;
+    margin-top: 100px;
+  }
+  &-left {
+    margin-right: 200px;
+    @include breakpoint-down(medium) {
+      margin: 0px 60px;
+      text-align: center;
+    }
+    &-heading {
+      color: $DarkBlue;
+      font-size: 25px;
+      
+      @include breakpoint-down(medium) {
+        font-size: 20px;
+
+      }
+    }
+    &-text {
+      color: $DarkGrayishBlue;
+    }
+  }
+  &-right {
+    @include breakpoint-down(medium) {
+      grid-column: 1/2;
+    
+    }
+    &-element {
+      @include breakpoint-down(medium) {
+        margin-top: 50px;
+      }
+      &-heading {
+        display: flex;
+        align-items: center;
+        @include breakpoint-down(medium){
+            background:linear-gradient(to right,white, hsla(12, 88%, 59%, 0.123));
+        }
+        &-num {
+          color: white;
+          background-color: $BrightRed;
+          padding: 8px 30px;
+          border-radius: 50px;
+          @include breakpoint-down(medium){
+              margin-left:20px ;
+          }
+        }
+        > h3 {
+          margin-left: 20px;
+          color: $DarkBlue;
+          @include breakpoint-down(medium){
+              margin-right: 20px;
+          }
+        }
+      }
+      &-text {
+        margin-right: 90px;
+       
+        margin-bottom: 40px;
+        margin-left: 102px;
+        color: $DarkGrayishBlue;
+        @include breakpoint-down(medium) {
+          margin: 25px 30px;
+          line-height: 30px;
+        }
+      }
+    }
+  }
+}
+
+// &-num{
+//     >h3{
+//         color: white;
+//         background-color: $BrightRed;
+//         padding:8px 30px;
+//         border-radius: 50px;
+//     }
+// }
+// &-text{
+
+//     &-heading{
+//         color: $DarkBlue;
+
+//     }
+//     &-text{
+//         margin-right: 90px;
+//         margin-top: 20px;
+//         margin-bottom: 40px;
+//         color: $DarkGrayishBlue;
+//         @include breakpoint-down(medium){
+//             margin: 0;
+//         }
+//     }
+// }

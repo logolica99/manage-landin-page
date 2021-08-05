@@ -1,0 +1,99 @@
+.footer{
+    background-color:$VeryDarkBlue ;
+
+    &-wrapper{
+        padding: 60px 150px;
+        display: flex;
+        justify-content: space-between;
+        
+        @include breakpoint-down(medium){
+         
+            padding: 60px 20px;
+            flex-direction: column-reverse;
+          
+            text-align: center;
+          
+           
+        }
+    }
+
+    &-logo{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        @include breakpoint-down(medium){
+            margin-top: 80px;
+            flex-direction:column-reverse ;
+        }
+        &-main{
+            @include breakpoint-down(medium){
+                margin-top: 80px;
+              
+            }
+        }
+        &-social{
+            display: flex;
+            justify-content: space-around;
+            @include breakpoint-down(medium){
+                justify-content: space-evenly;
+            }
+            >img{
+                @include breakpoint-down(medium){
+                    width: 29px;
+                }
+            }
+        }
+    }
+    &-links{
+        flex:2;
+      
+        color:white;
+        display: flex;
+        justify-content: space-around;
+        li{
+            list-style: none;
+            
+        }
+        li:not(:first-child){
+            margin-top: 20px;
+        }
+        @include breakpoint-down(medium){
+            margin-top: 80px;
+            text-align: left;
+        }
+        &-home{
+        }
+        &-careers{
+
+        }
+    }
+    &-subscription{
+        >input{
+            border:none;
+            border-radius: 20px;
+            height: 40px;
+            width: 250px;
+            padding: 20px;
+            @include breakpoint-down(medium){
+                width: 70%;
+                margin: auto;
+            }
+        }
+        >button{
+            margin-left: 20px;
+            border: none;
+            background-color: $BrightRed;
+            color: $VeryLightGray;
+            padding: 16px 26px;
+            border-radius: 40px;
+            font-weight: bold;
+            
+            cursor: pointer;
+            transition: all 200ms ease-in-out;
+        }
+        >button:hover{
+            opacity: 0.8;
+        }
+    }
+}
