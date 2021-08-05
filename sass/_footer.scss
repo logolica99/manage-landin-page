@@ -43,6 +43,9 @@
                     width: 29px;
                 }
             }
+            >img:hover{
+                opacity: 0.6    ;
+            }
         }
     }
     &-links{
@@ -54,6 +57,9 @@
         li{
             list-style: none;
             
+        }
+        li:hover{
+            opacity: .6;
         }
         li:not(:first-child){
             margin-top: 20px;
